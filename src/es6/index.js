@@ -53,3 +53,41 @@ const helloPromesa = () => {
 helloPromesa()
     .then(resolve => console.log(resolve))
     .catch(reject => console.log(reject));
+
+
+// clases en EC6
+class Operacion {
+    constructor() {
+        this.valor1 = 0;
+        this.valor2 = 0;
+    }
+
+    suma(valor1, valor2) {
+        this.valor1 = valor1;
+        this.valor2 = valor2;
+        return this.valor1 + this.valor2;
+    }
+}
+
+const oper = new Operacion();
+const suma = oper.suma(3, 2);
+console.log(`la suma es ${suma}`);
+
+// importar un modulo
+import {sayHello} from "./modulo";
+sayHello('JOSE MANZANO');
+
+// funcion generadora, va guardando los estados de los llamados especificados con la palabra yield
+function* helloGenerator() {
+    if (true) {
+        yield 'hello ';
+    }
+    if (true) {
+        yield 'Mundo.';
+    }
+};
+
+const generator =  helloGenerator();
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
