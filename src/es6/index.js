@@ -38,3 +38,18 @@ console.log(lista3);
 // var tiene scope del archivo
 // let tiene scope solo al bloque de codigo donde se declara
 // const es inmutable
+
+
+//una promesa es procesaciemto de algo que va a ocurrir, una promesa puede ser resuelta o rechazada
+const helloPromesa = () => {
+    return new Promise((resolve, reject) => {
+        if (false) {
+            resolve('Hey');
+        } else {
+            reject('Some wrong');
+        }
+    });
+};
+helloPromesa()
+    .then(resolve => console.log(resolve))
+    .catch(reject => console.log(reject));
