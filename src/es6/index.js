@@ -74,8 +74,8 @@ const suma = oper.suma(3, 2);
 console.log(`la suma es ${suma}`);
 
 // importar un modulo
-import {sayHello} from "./modulo";
-sayHello('JOSE MANZANO');
+//import {sayHello} from "./modulo";
+//sayHello('JOSE MANZANO');
 
 // funcion generadora, va guardando los estados de los llamados especificados con la palabra yield
 function* helloGenerator() {
